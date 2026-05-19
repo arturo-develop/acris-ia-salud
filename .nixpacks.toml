@@ -1,5 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs"]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+cmds = ["npm install -g serve"]
 
 [start]
-cmd = "npx serve . -p 3000"
+cmd = "serve . -l 3000"
